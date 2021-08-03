@@ -34,11 +34,16 @@
     --card-txt-2: hsl(228, 34%, 66%);
 }
 
-.body {
+body {
     margin: 0;
     border: 0;
     box-sizing: border-box;
     font-size: 13px;
+    background: var(--background);
+}
+
+main {
+    overflow-x: hidden;
 }
 
 * {
@@ -261,20 +266,18 @@ section {
         border-top: 1px solid black;
         padding-top: 1rem;
     }
+    .white-border {
+        border-top: 1px solid var(--card-txt);
+    }
     .count {
         font-size: 2rem;
     }
-
     section:last-child {
         padding-bottom: 2rem;
     }
 }
 
 @media (max-width: 375px) {
-    main {
-        overflow-x: hidden;
-    }
-
     :root {
         --card-width: 280px;
         --card-height: 270px;
