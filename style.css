@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 :root {
+
+    --card-width: 300px;
+    --card-height: 290px;
     /* CARDS */
     --green: hsl(163, 72%, 41%);
     --red: hsl(356, 69%, 56%);
@@ -36,5 +39,207 @@
     border: 0;
     box-sizing: border-box;
     font-size: 13px;
-    font-family: 'Inter', sans-serif;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+    /* typography / text style*/
+
+h1,
+h2,
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--card-txt);
+}
+
+h2,
+.heading,
+.name,
+.followers,
+.dark-mode {
+    color: var(--card-txt-2);
+}
+
+.follower-count {
+    font-size: 4rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.count {
+    font-size: 3rem;
+}
+
+.heading {
+    font-size: 1rem;
+}
+
+.followers {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+}
+
+.today-up {
+    color: var(--green);
+}
+
+.today-down {
+    color: var(--red);
+}
+
+    /* layout / style */
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+}
+
+nav {
+    align-self: center;
+    padding: 1rem;
+    width: calc(calc(var(--card-width) * 4) + calc(2rem * 8));
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 12rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 20px;
+    background: linear-gradient(var(--btn-col-1), var(--btn-col-2));
+    cursor: pointer;
+}
+
+.btn-dot {
+    background: var(--background);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 4px 0 4px;
+    border-radius: 100%;
+}
+
+.btn.is-active {
+    justify-content: flex-end;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.main-card {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    background: var(--card-bg);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.followers {
+    margin-bottom: 4rem;
+}
+
+.follower-count {
+    margin-top: 4rem;
+}
+
+.name,
+.today-up,
+.today-down  {
+    margin-left: 0.5rem;
+}
+
+.social,
+.today-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.today-icon {
+    height: 5px;
+}
+
+.main-card::before {
+    position: absolute;
+    height: 4px;
+    content: '';
+    left: 0;
+    right: 0;
+    top: -4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.facebook::before {
+    background: var(--facebook);
+}
+
+.twitter::before {
+    background: var(--twitter);
+}
+
+.instagram::before {
+    background: linear-gradient(90deg, var(--insta-col-1), var(--insta-col-2));
+}
+
+.youtube::before {
+    background: var(--youtube);
+}
+
+.secondary-card {
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--card-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: var(--card-width);
+}
+
+.icon-pos,
+.today-container-pos {
+    justify-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
