@@ -243,7 +243,43 @@ section {
     justify-self: flex-end;
 }
 
+@media (max-width: 790px) {
+    nav {
+        flex-flow: column nowrap;
+        width: calc(var(--card-width) + 2rem);
+        height: 8rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .heading {
+        font-size: 0.9rem;
+    }
+    .button-container {
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid black;
+        padding-top: 1rem;
+    }
+    .count {
+        font-size: 2rem;
+    }
 
+    section:last-child {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        overflow-x: hidden;
+    }
+
+    :root {
+        --card-width: 280px;
+        --card-height: 270px;
+    }
+}
 
 
 
