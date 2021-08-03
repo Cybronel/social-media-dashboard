@@ -119,7 +119,8 @@ nav,
 }
 
 @media (max-width: 1600px) {
-    nav {
+    nav,
+    .h2-wrapper {
         width: 100%;
     }
 }
@@ -253,6 +254,9 @@ section {
         flex-flow: column nowrap;
         width: calc(var(--card-width) + 2rem);
         height: 8rem;
+    }
+    .h2-wrapper {
+        width: calc(var(--card-width) + 2rem);
     }
     h1 {
         font-size: 1.5rem;
