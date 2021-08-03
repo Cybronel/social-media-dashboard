@@ -249,6 +249,11 @@ section {
     justify-self: flex-end;
 }
 
+.today-container-pos {
+    height: 2rem;
+    align-self: flex-end;
+}
+
 @media (max-width: 790px) {
     nav {
         flex-flow: column nowrap;
